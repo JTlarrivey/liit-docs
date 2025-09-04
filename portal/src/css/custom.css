@@ -1,30 +1,55 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
+/* ====== LIIT THEME ====== */
+/* Colores base (claro) */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Primario (azul Liit) */
+  --ifm-color-primary: #08a0e5;
+  --ifm-color-primary-dark: #078ecb;
+  --ifm-color-primary-darker: #067fb6;
+  --ifm-color-primary-darkest: #045e85;
+  --ifm-color-primary-light: #17b2f2;
+  --ifm-color-primary-lighter: #3bc0f5;
+  --ifm-color-primary-lightest: #6bd4fa;
+
+  /* Acento (magenta Liit) */
+  --brand-accent: #e11d8a;
+
+  /* Hero */
+  --ifm-hero-text-color: #ffffff;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Paleta en modo oscuro (un poco más luminosa) */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #4cc9f0;
+  --ifm-color-primary-dark: #3ab9e3;
+  --ifm-color-primary-darker: #2ca8d4;
+  --ifm-color-primary-darkest: #1c86ad;
+  --ifm-color-primary-light: #7bdcfa;
+  --ifm-color-primary-lighter: #9de6fb;
+  --ifm-color-primary-lightest: #c7f1fe;
+
+  --brand-accent: #ff4db2;
+  --ifm-hero-text-color: #e6faff;
+}
+
+/* ====== HERO (degradé azul→magenta) ====== */
+.hero.hero--primary {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--brand-accent) 100%);
+  color: var(--ifm-hero-text-color);
+}
+
+/* Botón secundario sobre el hero (se ve mejor así) */
+.hero .button.button--secondary {
+  background: #ffffff;
+  color: #0f172a;
+  border: none;
+}
+[data-theme='dark'] .hero .button.button--secondary {
+  background: #0b1220;
+  color: #e6faff;
+}
+
+/* Tipografía opcional (Inter) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+:root {
+  --ifm-font-family-base: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial;
 }
