@@ -30,13 +30,13 @@ Este repositorio contiene la documentación interna y pública (cuando correspon
 3. Al hacer merge a main, se publica el sitio.
 
 ## Comandos útiles
-npm ci dentro de /portal
-- 
-npm run start para entorno local
-- 
-npm run build para compilar el sitio
-- 
-npm run serve para previsualizar el build
+- npm ci dentro de /portal
+ 
+- npm run start para entorno local
+ 
+- npm run build para compilar el sitio
+ 
+- npm run serve para previsualizar el build
 
 ## Versionado de docs
 - Etiquetar cambios relevantes: docs/vYYYY.MM
