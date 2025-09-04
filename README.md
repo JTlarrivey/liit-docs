@@ -30,7 +30,6 @@ Este repositorio contiene la documentación interna y pública (cuando correspon
 3. Al hacer merge a main, se publica el sitio.
 
 ## Comandos útiles
-- 
 npm ci dentro de /portal
 - 
 npm run start para entorno local
