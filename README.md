@@ -25,7 +25,7 @@ Este repositorio contiene la documentación interna y pública (cuando correspon
 `
 
 ## Flujo de trabajo
-1. Crear rama â†’ editar Markdown â†’ abrir PR.
+1. Crear rama -> editar Markdown -> abrir PR.
 2. Revisión automática (lint, enlaces, build del portal) + CODEOWNERS de cada carpeta.
 3. Al hacer merge a main, se publica el sitio.
 
