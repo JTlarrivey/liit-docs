@@ -1,10 +1,11 @@
-import type {ReactNode} from 'react';
+import React, { type ReactNode } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
+import HomepageFeatures from '@site/src/components/HomepageFeatures'; // 👈 añadido
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -16,6 +17,11 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <div className="buttons">
+          <Link className="button button--secondary button--lg" to="/docs">
+            Ir a Docs
+          </Link>
+        </div>
       </div>
     </header>
   );
@@ -24,11 +30,10 @@ function HomepageHeader() {
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+    <Layout title={siteConfig.title} description={siteConfig.tagline}>
       <HomepageHeader />
       <main>
+        <HomepageFeatures /> {/* 👈 aquí aparecen las tarjetas */}
       </main>
     </Layout>
   );

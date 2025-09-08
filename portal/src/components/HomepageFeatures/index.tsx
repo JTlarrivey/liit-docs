@@ -1,57 +1,54 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
-import Heading from '@theme/Heading';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: ReactNode;
+  to: string;                               // ← destino de la tarjeta
+  icon?: string;                            // ← emoji opcional
+  Svg?: React.ComponentType<React.ComponentProps<'svg'>>; // si preferís SVG
 };
 
+// ⚠️ Como estás usando el preset classic, las rutas van con /docs/...
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    title: 'Diagramas',
+    description: <>Circuitos, topologías, markmaps y más.</>,
+    to: '/docs/20-engineering/diagrams',    // categoría/índice de diagramas
+    icon: '📈',
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    title: 'APIs',
+    description: <>OpenAPI, quickstarts y guías de uso.</>,
+    to: '/docs/50-products/apis',           // sección de APIs
+    icon: '🔌',
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    title: 'Procesos',
+    description: <>Onboarding, SDLC, incidentes y políticas.</>,
+    to: '/docs/10-handbook',                // documentación general/procesos
+    icon: '🗂️',
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Svg, icon, description, to}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+      <Link className={styles.card} to={to}>
+        <div className="text--center">
+          {Svg ? (
+            <Svg className={styles.featureSvg} role="img" />
+          ) : (
+            <span className={styles.emoji} aria-hidden="true">{icon}</span>
+          )}
+        </div>
+        <div className="text--center padding-horiz--md">
+          <h3 className={styles.title}>{title}</h3>
+          <p className={styles.desc}>{description}</p>
+        </div>
+      </Link>
     </div>
   );
 }
