@@ -1,4 +1,4 @@
 {
   "label": "Procesos",
-  "link": { "type": "generated-index", "description": "Procesos, políticas y guía general." }
+  "link": { "type": "generated-index", "slug": "/10-handbook", "description": "Procesos, políticas y guía general." }
 }

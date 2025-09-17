@@ -1,4 +1,4 @@
 {
   "label": "APIs",
-  "link": { "type": "generated-index", "description": "Documentación de APIs, contratos y ejemplos." }
+  "link": { "type": "generated-index", "slug": "/50-products/apis", "description": "Documentación de APIs, contratos y ejemplos." }
 }

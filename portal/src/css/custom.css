@@ -48,6 +48,19 @@
   color: #e6faff;
 }
 
+.diagram-viewport {
+  height: 80vh;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  overflow: hidden;           /* oculta scrollbars internas del canvas */
+  background: var(--ifm-background-color);
+}
+
+/* opcional: evitar que el plugin global de zoom toque este viewer */
+.diagram-viewport img {
+  pointer-events: none;       /* la rueda/drag se lo lleva el visor */
+}
+
 /* Tipografía opcional (Inter) */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 :root {
