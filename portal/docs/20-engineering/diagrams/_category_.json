@@ -1,4 +1,5 @@
 {
   "label": "Diagramas",
-  "link": { "type": "generated-index", "slug": "/20-engineering/diagrams", "description": "Circuitos, topologías, markmaps y diagramas técnicos." }
+  "position": 20
+
 }
