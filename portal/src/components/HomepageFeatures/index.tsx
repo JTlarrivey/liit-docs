@@ -16,7 +16,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Diagramas',
     description: <>Circuitos, topologías, markmaps y más.</>,
-    to: '/docs/20-Ingeniería/Diagramas',    // categoría/índice de diagramas
+    to: '/docs/20-ingenieria/diagramas',    // categoría/índice de diagramas
     icon: '📈',
   },
   {
