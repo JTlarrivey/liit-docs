@@ -16,19 +16,19 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Diagramas',
     description: <>Circuitos, topologías, markmaps y más.</>,
-    to: '/docs/20-engineering/diagrams',    // categoría/índice de diagramas
+    to: '/docs/20-Ingeniería/Diagramas',    // categoría/índice de diagramas
     icon: '📈',
   },
   {
     title: 'APIs',
     description: <>OpenAPI, quickstarts y guías de uso.</>,
-    to: '/docs/50-products/apis',           // sección de APIs
+    to: '/docs/50-Productos/apis',           // sección de APIs
     icon: '🔌',
   },
   {
     title: 'Procesos',
     description: <>Onboarding, SDLC, incidentes y políticas.</>,
-    to: '/docs/10-handbook',                // documentación general/procesos
+    to: '/docs/10-Procesos',                // documentación general/procesos
     icon: '🗂️',
   },
 ];
